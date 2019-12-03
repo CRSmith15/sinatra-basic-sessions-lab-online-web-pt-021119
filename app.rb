@@ -4,5 +4,10 @@ class App < Sinatra::Base
   
   configure do 
     enable :sessions 
-    set :session_sec
+    set :session_secret
+  end
+  
+  get '/' do 
+    erb :index
+  end
 end
