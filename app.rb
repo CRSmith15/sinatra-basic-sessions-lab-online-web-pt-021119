@@ -2,5 +2,6 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   
-  configure
+  configure do 
+    
 end
