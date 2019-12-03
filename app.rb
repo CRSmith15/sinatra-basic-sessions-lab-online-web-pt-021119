@@ -18,3 +18,4 @@ class App < Sinatra::Base
     erb :checkout
   end
 end
+end
