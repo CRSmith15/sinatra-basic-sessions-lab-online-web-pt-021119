@@ -4,7 +4,7 @@ class App < Sinatra::Base
   
   configure do unless test?
     enable :sessions 
-    set :session_secret
+    set :session_secret, "secret"
   end
   
   get '/' do 
@@ -12,6 +12,9 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do 
-    session[:item] = params[:item]
+    @item = params[:item]
+    session[:item] = @item 
+    
+    erb :checkout
   end
 end
